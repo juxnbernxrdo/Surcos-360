@@ -85,15 +85,29 @@ Toda regla de acceso y restricción de rol (en especial las restricciones de `ST
 
 ---
 
-## 7. Estándares y Reglas de Desarrollo Frontend y UX
+## 7. Estándares y Reglas de Desarrollo Frontend y UX (Skills Obligatorias de Emil Kowalski)
 
-### 7.1 Design System y Skills de Emil Kowalski
-* Todo trabajo frontend en Next.js adoptará los principios de interacción, animación y UX establecidos por Emil Kowalski (`emil-design-eng`, `animate`, `apple-design`, `pick-ui-library`, etc.).
-* Se primará la claridad visual, jerarquía tipográfica fuerte, accesibilidad y retroalimentación contextual inmediata (estados de loading, error, vacío y éxito).
+### 7.1 Dependencia Obligatoria de Skills
+Todo trabajo frontend en Surcos 360 (**Specify, Plan, Tasks, Analyze, Implement, Converge**) debe utilizar obligatoriamente las skills de Emil Kowalski según aplique:
+- `emil-design-eng` (Referencia principal para diseño de interacción, jerarquía y motion).
+- `animate` (Implementación de animaciones con propiedades, easing y timing explícito).
+- `review-animations` & `improve-animations` (Auditoría y eliminación de motion ornamental innecesario).
+- `find-animation-opportunities` (Identificación estratégica de microinteracciones).
+- `prototype` (Creación de variaciones genuinas de UI antes de construir).
+- `animation-vocabulary` (Descripción precisa del movimiento).
+- `apple-design` (Claridad visual, interacción fluida y jerarquía).
+- `pick-ui-library` (Evaluación de componentes existentes antes de construir desde cero).
 
 ### 7.2 Regla de Motion (Animación Funcional)
 * **Motion por propósito:** Toda animación debe ser funcional (confirmar, explicar, conectar cambios de estado). Queda prohibida la animación puramente decorativa o que ralentice flujos críticos.
 * **Sustento de accesibilidad:** Todo componente con animación debe soportar obligatoriamente la preferencia del sistema `prefers-reduced-motion`.
+
+### 7.3 Gate Obligatorio de Frontend
+Ninguna tarea frontend puede marcarse como completada sin pasar el **Gate de Frontend**:
+- [ ] Skills de Emil Kowalski aplicadas.
+- [ ] Sin motion innecesario / Soporte `prefers-reduced-motion`.
+- [ ] Retroalimentación contextual (loading, error, empty, success).
+- [ ] Accesibilidad (WCAG AA), responsive y navegación por teclado verificados.
 
 ---
 

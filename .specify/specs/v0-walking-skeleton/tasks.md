@@ -13,7 +13,7 @@
 - [ ] **TSK-B01:** Crear `RegistrationToken` schema y servicio con hashing de token y caducidad. [Backend/Security]
 - [ ] **TSK-B02:** Implementar servicio de importación CSV de estudiantes con match exacto (`InstitutionalPerson` + `StudentRecord`). [Backend/Identity]
 - [ ] **TSK-B03:** Implementar endpoint de canje de token y vinculación con Supabase Auth `User`. [Backend/Auth]
-- [ ] **TSK-B04:** Crear UI de Registro / Canje de Token en Next.js con feedback visual de error/éxito. [Frontend/UX]
+- [ ] **TSK-B04:** Crear UI de Registro / Canje de Token en Next.js con feedback visual de error/éxito. [Frontend/UX - Mandatory Skills: `emil-design-eng`, `apple-design`, `pick-ui-library`]
 
 ---
 
@@ -28,7 +28,7 @@
 - [ ] **TSK-D01:** Crear módulo `Ledger` con servicio para transacciones de partida doble ($\sum \text{DEBIT} = \sum \text{CREDIT}$). [Backend/Finance]
 - [ ] **TSK-D02:** Implementar creación automática de `StudentAccount` y movimiento `INITIAL_BALANCE`. [Backend/Finance]
 - [ ] **TSK-D03:** Implementar middleware/interceptor de Idempotencia basado en header `Idempotency-Key`. [Backend/Security]
-- [ ] **TSK-D04:** Crear UI de Dashboard del Estudiante (`/student/dashboard`) en Next.js con saldo, gastos e historial. [Frontend/UX]
+- [ ] **TSK-D04:** Crear UI de Dashboard del Estudiante (`/student/dashboard`) en Next.js con saldo, gastos e historial. [Frontend/UX - Mandatory Skills: `emil-design-eng`, `apple-design`, `find-animation-opportunities`, `review-animations`]
 
 ---
 
@@ -36,7 +36,7 @@
 - [ ] **TSK-E01:** Crear módulo `AgroRed` con CRUD de Productos, Inventarios y Proveedores. [Backend/Domain]
 - [ ] **TSK-E02:** Implementar registro de Compras a Proveedores con recálculo de WAC y locking `FOR UPDATE`. [Backend/Domain]
 - [ ] **TSK-E03:** Implementar registro atómico de Ventas (deducción stock WAC + asiento contable + `SaleItem` + `AuditLog`). [Backend/Domain]
-- [ ] **TSK-E04:** Crear pantallas de gestión de AgroRed en Next.js (Productos, Inventario, Compras, Ventas) con Emil Kowalski UX & Motion. [Frontend/UX]
+- [ ] **TSK-E04:** Crear pantallas de gestión de AgroRed en Next.js (Productos, Inventario, Compras, Ventas) con Emil Kowalski UX & Motion. [Frontend/UX - Mandatory Skills: `emil-design-eng`, `apple-design`, `animate`, `pick-ui-library`, `review-animations`]
 
 ---
 
