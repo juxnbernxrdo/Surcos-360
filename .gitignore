@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+.yarn/
+backend/node_modules/
+frontend/node_modules/
+
+# Production builds & compiled artifacts
+dist/
+build/
+backend/dist/
+frontend/.next/
+frontend/out/
+
+# Environment files & secrets
+.env
+.env.*
+!.env.example
+*.local
+*.pem
+*.key
+*.cert
+
+# Next.js & TypeScript cache
+*.tsbuildinfo
+frontend/next-env.d.ts
+
+# Testing & coverage reports
+coverage/
+backend/coverage/
+.nyc_output/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS & Editor configurations
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Temporary directories
+.temp/
+.tmp/
+.cache/
+graphify-out/

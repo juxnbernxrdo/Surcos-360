@@ -1,8 +1,19 @@
 import { Injectable, OnModuleInit, OnModuleDestroy } from '@nestjs/common';
 import { PrismaClient } from '@prisma/client';
+import { PrismaPg } from '@prisma/adapter-pg';
 
 @Injectable()
-export class PrismaService extends PrismaClient implements OnModuleInit, OnModuleDestroy {
+export class PrismaService
+  extends PrismaClient
+  implements OnModuleInit, OnModuleDestroy
+{
+  constructor() {
+    const connectionString =
+      process.env.DATABASE_URL ??
+      'postgresql://postgres:postgres@localhost:5432/surcos360';
+    super({ adapter: new PrismaPg({ connectionString }) });
+  }
+
   async onModuleInit() {
     await this.$connect();
   }
@@ -15,10 +26,15 @@ export class PrismaService extends PrismaClient implements OnModuleInit, OnModul
    * Run queries inside a transaction with Postgres RLS JWT claims set.
    * This guarantees Capa 3 RLS enforcement per user.
    */
-  async withRlsClaims<T>(jwtClaims: Record<string, any>, fn: (prisma: PrismaClient) => Promise<T>): Promise<T> {
+  async withRlsClaims<T>(
+    jwtClaims: Record<string, any>,
+    fn: (prisma: PrismaClient) => Promise<T>,
+  ): Promise<T> {
     return this.$transaction(async (tx) => {
       const claimsJson = JSON.stringify(jwtClaims);
-      await tx.$executeRawUnsafe(`SET LOCAL request.jwt.claims = '${claimsJson}'`);
+      await tx.$executeRawUnsafe(
+        `SET LOCAL request.jwt.claims = '${claimsJson}'`,
+      );
       return fn(tx as unknown as PrismaClient);
     });
   }
